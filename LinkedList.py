@@ -63,10 +63,24 @@ class LinkedList:
             itr = itr.next
         temp_node = itr.next
         itr.next = Node(data,temp_node)
+        
+    def remove_at(self,pos):
+        if pos<0 or pos>self.get_length():
+            print("Invalid position")
+            return
+        if pos == 0:
+            self.head = self.head.next
+            return
+        itr = self.head
+        for _ in range(pos-1):
+            itr = itr.next
+        itr.next = itr.next.next
 
 list = LinkedList()
 list.insert_values([1,2,3,4,5])
 list.print()
 list.insert_at_middle(7,2)
+list.print()
+list.remove_at(2)
 list.print()
         
