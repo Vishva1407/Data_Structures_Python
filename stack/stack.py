@@ -42,8 +42,8 @@ class Stack:
         return self.head.data
     
 s = Stack()
-s.push("Atchaya")
-s.push("Vishva")
+s.push(2)
+s.push(1)
 s.print()
 print("size of the stack = ",s.size())
 print("Top element of the stack is ",s.peek())
