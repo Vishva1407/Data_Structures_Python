@@ -51,7 +51,7 @@ class LinkedList:
         for datum in data:
             self.append(datum)
 
-    def insert_at_middle(self,data,pos):
+    def insert_at(self,data,pos):
         if pos<0 or pos>=self.get_length():
             print("Invalid position")
             return
@@ -79,7 +79,7 @@ if __name__ == "main":
     list = LinkedList()
     list.insert_values([1,2,3,4,5])
     list.print()
-    list.insert_at_middle(7,2)
+    list.insert_at(7,2)
     list.print()
     list.remove_at(2)
     list.print()
